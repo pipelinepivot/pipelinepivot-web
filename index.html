@@ -213,7 +213,7 @@ html,body{overflow-x:clip}
 .hb:hover{transform:translate(-50%,-50%) translateY(-3px) rotate(-1.5deg)}
 .hband{position:relative;z-index:2;margin-top:-170px;padding-top:150px;background:linear-gradient(rgba(27,35,43,0),var(--bg2) 150px)}
 .htxt{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;padding-bottom:56px}
-.htxt h1{font-size:clamp(34px,5.4vw,70px);max-width:14ch}
+.htxt h1{font-size:clamp(30px,4.6vw,64px);max-width:none}
 .htxt p{margin:14px 0 0;color:var(--mute);max-width:46ch;font-size:clamp(16px,1.6vw,19px)}
 .htxt .acts{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
 :root{--sm:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,10 61,38 91,38 67,57 76,86 50,69 24,86 33,57 9,38 39,38' fill='black' stroke='black' stroke-width='9' stroke-linejoin='round'/%3E%3C/svg%3E")}
@@ -522,7 +522,7 @@ h2.land,.land{letter-spacing:-.035em!important;line-height:.86!important;word-sp
 .flow li.rvw em{width:54px;height:54px;margin:-9px auto 8px;font-size:22px;background:#5b3df5!important;box-shadow:0 0 0 6px rgba(91,61,245,.18);animation:dnode .5s .75s both,rvp 2s 1.4s ease-in-out infinite}
 .flow li.rvw small{display:block;font-size:12px;font-weight:600;color:#4a4b63;margin-top:3px}
 @keyframes rvp{0%,100%{box-shadow:0 0 0 6px rgba(91,61,245,.18)}50%{box-shadow:0 0 0 16px rgba(91,61,245,0)}}
-.flow ol::after{content:"";position:absolute;right:12.5%;width:19%;top:17px;border-top:3px solid #5b3df5}.ytb.ytg{background:linear-gradient(135deg,#5b3df5,#1d1a47)}.sd .et.fe{aspect-ratio:auto;min-height:150px}.sd.one{grid-template-rows:1fr}.sd.one .et.fe{min-height:0}.bfield{min-height:560px}.bfield .msg{margin-bottom:0}.bfield .msg{font-size:clamp(17px,1.7vw,22px)!important;line-height:1.25!important;max-width:380px;margin:0 auto!important}.bfield{min-height:520px}</style>
+.flow ol::after{content:"";position:absolute;right:12.5%;width:19%;top:17px;border-top:3px solid #5b3df5}.ytb.ytg{background:linear-gradient(135deg,#5b3df5,#1d1a47)}.sd .et.fe{aspect-ratio:auto;min-height:150px}.sd.one{grid-template-rows:1fr}.sd.one .et.fe{min-height:0}.bfield{min-height:560px}.bfield .msg{margin-bottom:0}.bfield .msg{font-size:clamp(17px,1.7vw,22px)!important;line-height:1.25!important;max-width:380px;margin:0 auto!important}.bfield{min-height:520px}@media(max-width:480px){.htxt h1{font-size:25px}}</style>
 </head>
 <body>
 <div class="prog" id="prog"></div><nav><div class="wrap"><a class="brand" href="#inicio"><img src="assets/icon-white.webp" alt=""><b>Pipeline Pivot</b></a><div><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a></div></div></nav>
@@ -534,10 +534,10 @@ h2.land,.land{letter-spacing:-.035em!important;line-height:.86!important;word-sp
 <p class="an a2">qué te<br><b>diferencia</b><img src="assets/arrow-white.webp" alt=""></p>
 <p class="an a3"><b>y cómo quieres conectar con las personas</b> para convertir esa esencia en una marca memorable.<img src="assets/arrow-white.webp" alt=""></p>
 <a class="btn hb" href="#proceso">¿Cómo trabajamos?</a></div>
-<div class="hband"><div class="wrap htxt"><div><h1>Las marcas no solo se ven. Se experimentan.</h1><p>Conectamos estrategia, identidad y creatividad para construir marcas que se entienden, se recuerdan y generan conexiones reales.</p></div><div class="acts"><a class="btn" href="#servicios">Ver servicios</a><a class="lnk" href="#proyectos">Explorar proyectos</a></div></div></div></header>
+<div class="hband"><div class="wrap htxt"><div><h1>Las marcas no solo se ven.<br>Se experimentan.</h1><p>Conectamos estrategia, identidad y creatividad para construir marcas que se entienden, se recuerdan y generan conexiones reales.</p></div><div class="acts"><a class="btn" href="#servicios">Ver servicios</a><a class="lnk" href="#proyectos">Explorar proyectos</a></div></div></div></header>
 <header class="hero" hidden><div class="wrap">
 <div>
-<h1>Las marcas no solo se ven. Se experimentan.</h1>
+<h1>Las marcas no solo se ven.<br>Se experimentan.</h1>
 <p class="lead">Conectamos estrategia, identidad y creatividad para construir marcas que se entienden, se recuerdan y generan conexiones reales.</p>
 <div class="acts"><a class="btn" href="#servicios">Ver servicios</a><a class="lnk" href="#proyectos">Explorar proyectos</a></div>
 </div>
@@ -675,7 +675,7 @@ h2.land,.land{letter-spacing:-.035em!important;line-height:.86!important;word-sp
 <script>
 (function(){
 var d=document,h=d.documentElement;h.classList.add('js');
-var t=d.querySelector('h1');if(t){t.innerHTML=t.textContent.split(' ').map(function(w,i){return '<span class="w" style="animation-delay:'+(i*110)+'ms">'+w+'</span>'}).join(' ')}
+var t=d.querySelector('h1');if(t){t.innerHTML=t.innerHTML.replace('<br>',' ').split(' ').map(function(w,i){return '<span class="w" style="animation-delay:'+(i*110)+'ms">'+w+'</span>'+(w==='ven.'?'<br>':'')}).join(' ')}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
 d.querySelectorAll('h2,.srv,.two>div,.ph,ol.steps li,.faq details,.idea q,.contact .acts').forEach(function(el,i){el.classList.add('rv');el.style.transitionDelay=((i%4)*90)+'ms';io.observe(el)});
 var hero=d.querySelector('.hero'),gs=d.querySelectorAll('.scene g[data-d]');
