@@ -229,7 +229,13 @@ dialog.ct .top::before{-webkit-mask-image:var(--m3)!important;mask-image:var(--m
 .mq span i,.mq2 span i{display:inline-block;width:22px;height:22px;margin-left:26px;vertical-align:-3px;-webkit-mask:var(--m2) center/contain no-repeat;mask:var(--m2) center/contain no-repeat;background:var(--tm)}.mq2 span i{background:var(--mu)}
 .vacio .btn::after,.bdg::after{content:none}
 .vacio .hero .bdg{top:8px!important;right:1.5%!important;width:118px;height:118px;font-size:16px}@media(max-width:700px){.vacio .hero .bdg{top:16px!important;width:96px;height:96px;right:4%!important}}
-/* badge por fuera */.vacio{position:relative}.vacio>.bdg{position:absolute;top:-44px!important;right:1%!important;width:128px!important;height:128px!important;font-size:17px!important;z-index:6;transform:rotate(14deg)}@media(max-width:700px){.vacio>.bdg{top:-40px!important;right:2%!important;width:92px!important;height:92px!important;font-size:13px!important}}
+/* badge por fuera */.vacio{position:relative;margin-top:84px!important}.vacio>.bdg{position:absolute;top:-52px!important;right:2%!important;width:112px!important;height:112px!important;font-size:15px!important;z-index:6;transform:rotate(14deg)}@media(max-width:700px){.vacio{margin-top:76px!important}.vacio>.bdg{top:-46px!important;right:3%!important;width:88px!important;height:88px!important;font-size:12px!important}}
+/* faqs */.faq{margin:64px auto 0;max-width:820px;position:relative}.faq h2{font-size:clamp(30px,5vw,46px);font-weight:900;color:var(--cr);text-transform:uppercase;letter-spacing:-.01em;line-height:1;margin-bottom:26px;transform:rotate(-1.5deg);text-shadow:4px 4px 0 var(--nv)}.faq h2 span{color:var(--mu)}
+.faq details{background:var(--cr);color:var(--nv);border:3px solid var(--nv);border-radius:18px 28px 16px 26px;margin:0 0 16px;box-shadow:6px 6px 0 var(--nv);transition:transform .2s}.faq details:nth-child(odd){transform:rotate(-.8deg)}.faq details:nth-child(even){transform:rotate(.7deg);background:#fbf3d6}.faq details[open]{transform:rotate(0)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 62px 18px 22px;font-weight:800;font-size:clamp(16px,2.2vw,19px);position:relative;min-height:44px}.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;margin-top:-18px;width:36px;height:36px;border-radius:50%;background:var(--tm);color:var(--cr);border:3px solid var(--nv);display:grid;place-items:center;font-size:24px;line-height:1;font-weight:900}.faq details[open] summary::after{content:"–";background:var(--mu);color:var(--nv)}
+.faq details p{padding:0 22px 20px;font-size:16px;line-height:1.55;font-weight:500}.faq details a{color:var(--tm);font-weight:800}
+/* sparks blancas y variadas */h1 .sp{filter:drop-shadow(0 0 3px #fff) drop-shadow(0 0 7px rgba(255,255,255,.9))!important}h1 .s1{width:42px!important;height:42px!important;left:-14px!important;top:6%!important}h1 .s2{width:20px!important;height:20px!important;left:34%!important;right:auto!important;top:-12px!important}h1 .s3{width:34px!important;height:34px!important;right:-12px!important;left:auto!important;top:30%!important;bottom:auto!important}h1 .s4{width:16px!important;height:16px!important;right:26%!important;bottom:-8px!important;left:auto!important;top:auto!important}
 </style>
 </head>
 <body>
@@ -248,6 +254,7 @@ dialog.ct .top::before{-webkit-mask-image:var(--m3)!important;mask-image:var(--m
 <main><div class="wrap">
 <div class="grid" id="grid" aria-live="polite"></div>
 <div class="all" id="all" hidden><a class="btn" id="allbtn" target="_blank" rel="noopener" href="#">Ver toda la tienda ↗</a></div>
+<section class="faq" aria-labelledby="faq-t"><h2 id="faq-t">Preguntas <span>frecuentes</span></h2><div id="faqs"></div></section>
 <div class="cta-strip"><div><b>¿Tienes alguna duda?</b><span>Prints, archivos digitales, envíos o pedidos.</span></div><button class="btn" type="button" data-open>Contacto</button></div>
 </div></main>
 <footer><div class="wrap"><span>Pipeline Pivot</span><span><a href="index.html">Volver a la web</a> · © 2026</span></div></footer>
@@ -256,6 +263,10 @@ dialog.ct .top::before{-webkit-mask-image:var(--m3)!important;mask-image:var(--m
 <a class="btn" target="_blank" rel="noopener" href="https://wa.me/34683379317?text=Hola%2C%20tengo%20una%20duda%20sobre%20la%20tienda.">Escríbeme por WhatsApp</a>
 <a class="mail" href="mailto:pipelinepivot@gmail.com">pipelinepivot@gmail.com</a></div></dialog>
 <script src="productos.js"></script>
+<script>(function(){var T=window.TIENDA||{},F=T.faqs||[],box=document.getElementById('faqs'),sec=document.querySelector('.faq');if(!F.length){if(sec)sec.hidden=true;return}
+function esc(x){return String(x).replace(/[&<>]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;'}[c]})}
+box.innerHTML=F.map(function(f){return '<details><summary>'+esc(f.q)+'</summary><p>'+esc(f.a)+'</p></details>'}).join('')})();</script>
+
 <script>
 (function(){
 var T=window.TIENDA||{productos:[]},g=document.getElementById('grid'),cur='todo';
