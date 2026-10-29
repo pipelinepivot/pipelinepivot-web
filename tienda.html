@@ -229,7 +229,7 @@ dialog.ct .top::before{-webkit-mask-image:var(--m3)!important;mask-image:var(--m
 .mq span i,.mq2 span i{display:inline-block;width:22px;height:22px;margin-left:26px;vertical-align:-3px;-webkit-mask:var(--m2) center/contain no-repeat;mask:var(--m2) center/contain no-repeat;background:var(--tm)}.mq2 span i{background:var(--mu)}
 .vacio .btn::after,.bdg::after{content:none}
 .vacio .hero .bdg{top:8px!important;right:1.5%!important;width:118px;height:118px;font-size:16px}@media(max-width:700px){.vacio .hero .bdg{top:16px!important;width:96px;height:96px;right:4%!important}}
-/* badge sin cortes */.vacio .hero .bdg{top:22px!important;right:3%!important;width:100px;height:100px;font-size:14px}@media(max-width:700px){.vacio .hero .bdg{top:30px!important;right:6%!important;width:84px;height:84px;font-size:12px}.vacio .hero{padding-top:96px}}
+/* badge por fuera */.vacio{position:relative}.vacio>.bdg{position:absolute;top:-44px!important;right:1%!important;width:128px!important;height:128px!important;font-size:17px!important;z-index:6;transform:rotate(14deg)}@media(max-width:700px){.vacio>.bdg{top:-40px!important;right:2%!important;width:92px!important;height:92px!important;font-size:13px!important}}
 </style>
 </head>
 <body>
@@ -270,7 +270,7 @@ function card(p){
 function render(){
  var list=(T.productos||[]).filter(function(p){return cur==='todo'||p.tipo===cur});
  if(!(T.productos||[]).length){
-  g.innerHTML='<div class="vacio" style="grid-column:1/-1"><div class="hero"><b class="bdg">¡Ya<br>casi!</b><h2><span class="w1">Muy</span> <span class="w2">pronto</span></h2><p>Estoy preparando los primeros prints y piezas de arte digital. Escríbeme y te aviso en cuanto abra.</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+T.whatsapp+'?text='+encodeURIComponent('Hola, quiero que me avises cuando abra la tienda.')+'">Avísame por WhatsApp</a></div><div class="tz"><div class="t1"><span><small>Para tu pared</small>Prints</span></div><div class="t2"><span><small>Para tu pantalla</small>Arte digital</span></div><div class="t3"><span><small>Para ti</small>Novedades</span></div></div></div>';
+  g.innerHTML='<div class="vacio" style="grid-column:1/-1"><b class="bdg">¡Ya<br>casi!</b><div class="hero"><h2><span class="w1">Muy</span> <span class="w2">pronto</span></h2><p>Estoy preparando los primeros prints y piezas de arte digital. Escríbeme y te aviso en cuanto abra.</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+T.whatsapp+'?text='+encodeURIComponent('Hola, quiero que me avises cuando abra la tienda.')+'">Avísame por WhatsApp</a></div><div class="tz"><div class="t1"><span><small>Para tu pared</small>Prints</span></div><div class="t2"><span><small>Para tu pantalla</small>Arte digital</span></div><div class="t3"><span><small>Para ti</small>Novedades</span></div></div></div>';
  }else if(!list.length){
   g.innerHTML='<div class="vacio" style="grid-column:1/-1"><h2>Pronto</h2><p>Todavía no hay piezas en esta categoría.</p></div>';
  }else g.innerHTML=list.map(card).join('');
