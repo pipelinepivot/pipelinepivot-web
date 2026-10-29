@@ -185,13 +185,48 @@ body::after{content:"";position:fixed;inset:-40%;z-index:0;pointer-events:none;b
 .mq{background:var(--cr)}
 nav,header,main,footer,.mq,.gs{position:relative}
 .gs{position:absolute!important}
+
+/* dinamico */
+:root{--sq:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Cpath d='M4 22 Q20 4 36 22 T68 22 T100 22 T132 22 T164 22 T196 20' fill='none' stroke='%23f4b72e' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");--sq2:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Cpath d='M4 20 Q20 4 36 20 T68 20 T100 20 T132 20 T164 20 T196 20' fill='none' stroke='%23f3ead0' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");--zz:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 40'%3E%3Cpath d='M4 30 L24 8 L44 30 L64 8 L84 30 L104 8 L124 30 L144 8 L164 30 L184 8 L196 24' fill='none' stroke='%23e8472f' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.vacio .hero{border:0;outline:0;box-shadow:none;border-radius:0;background:var(--tm);transform:rotate(-1.6deg);padding:84px 40px 76px;margin-inline:-8px;clip-path:polygon(1% 4%,16% 0,38% 3%,62% 0,83% 4%,100% 1%,99% 28%,100% 56%,98% 84%,100% 99%,78% 96%,55% 100%,32% 97%,10% 100%,0 96%,2% 66%,0 38%);filter:drop-shadow(10px 10px 0 var(--nv))}
+.vacio h2{font-size:clamp(56px,11vw,150px);line-height:.82;text-shadow:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:0 .18em}
+.vacio h2 .w1{display:inline-block;color:var(--cr);transform:rotate(-6deg) translateY(.04em);text-shadow:5px 5px 0 var(--nv),-3px -2px 0 var(--mu)}
+.vacio h2 .w2{display:inline-block;color:var(--mu);transform:rotate(3deg) skewX(-6deg) translateY(.1em);text-shadow:5px 5px 0 var(--nv)}
+.vacio .hero::before{width:110px;height:110px;left:3%;top:10%;transform:rotate(14deg)}.vacio .hero::after{width:80px;height:80px;right:8%;bottom:10%;transform:rotate(-18deg)}
+.vacio .btn{transform:rotate(-2deg);border-radius:18px 26px 20px 28px;font-size:19px}.vacio .btn:hover{transform:rotate(1deg) translate(-2px,-2px)}
+.bdg{right:2%;top:-34px;width:150px;height:150px;font-size:20px;transform:rotate(16deg)}
+.vacio p{max-width:520px;transform:rotate(.8deg)}
+.mq{transform:rotate(-2.2deg);margin:34px -30px 8px;border-radius:0;padding:10px 0}
+.mq2{background:var(--tm);transform:rotate(1.4deg);margin:6px -30px 56px;position:relative;z-index:1;overflow:hidden;border:3px solid var(--nv);border-inline:0;padding:9px 0}.mq2 div{display:flex;width:max-content;animation:mq 34s linear infinite reverse}.mq2 span{font-weight:900;font-size:clamp(15px,2vw,20px);letter-spacing:.14em;text-transform:uppercase;color:var(--cr);padding-right:26px;white-space:nowrap}.mq2 span i{font-style:normal;color:var(--mu);margin-left:26px}
+.tz{display:flex;gap:0;flex-wrap:wrap;justify-content:center;margin-top:60px;padding-bottom:30px}
+.tz div{flex:1 1 280px;max-width:380px;aspect-ratio:1/1.05;outline:0;border-width:4px;margin:0 -8px}
+.tz .t1{transform:rotate(-5deg) translateY(10px);border-radius:46px 14px 40px 12px;z-index:1}
+.tz .t2{transform:rotate(3deg) translateY(-26px);border-radius:14px 44px 14px 48px;z-index:2}
+.tz .t3{transform:rotate(-2deg) translateY(22px);border-radius:40px 40px 10px 40px;z-index:1}
+.tz div:hover{transform:rotate(0) translateY(-10px) scale(1.04);z-index:5}
+.tz div::before{width:44%;right:8%;top:8%;transform:rotate(12deg)}.tz .t2::before{transform:rotate(-16deg)}
+.tz div::after{content:"";position:absolute;left:14px;right:14px;top:62%;height:30px;background:var(--sq) center/100% 100% no-repeat;opacity:.9}
+.tz .t1::after{background-image:var(--sq2)}.tz .t2::after{background-image:var(--zz)}.tz .t3::after{background-image:var(--zz)}
+.tz small{display:inline-block;background:var(--nv);color:var(--cr);padding:3px 9px;border-radius:6px;transform:rotate(-3deg);margin-bottom:6px}
+.cta-strip{outline:0;border:4px solid var(--nv);box-shadow:none;transform:rotate(-1deg);border-radius:10px 40px 14px 36px;margin-top:70px;filter:drop-shadow(8px 8px 0 var(--nv));padding-block:30px}
+.cta-strip .btn{transform:rotate(2deg)}
+header h1 .hw{transform:rotate(-4deg);display:inline-block;margin-left:-6px}
+header h1 .hw::after{content:"";position:absolute;left:4%;right:0;bottom:-26px;height:28px;background:var(--sq) center/100% 100% no-repeat;transform:rotate(1.5deg)}
+header p{transform:rotate(-1deg);transform-origin:left;margin-top:34px}
+.filtros button:nth-child(1){transform:rotate(-3deg)}.filtros button:nth-child(2){transform:rotate(2deg)}.filtros button:nth-child(3){transform:rotate(-1.5deg)}.filtros button{border-radius:20px 28px 22px 30px}
+dialog.ct{transform:rotate(-2deg);border-radius:12px 44px 16px 40px;outline:0}
+dialog.ct[open]{animation:pop2 .45s cubic-bezier(.2,1.5,.4,1)}@keyframes pop2{from{opacity:0;transform:rotate(7deg) scale(.8)}}
+dialog.ct .top{transform:none;border-radius:0}dialog.ct h2{transform:rotate(-3deg);transform-origin:left}
+dialog.ct .btn{transform:rotate(1.5deg);border-radius:16px 26px 18px 28px}
+.g1{transform:rotate(14deg)}
+@media(max-width:700px){.tz div{margin:-14px 0;max-width:340px}.tz{padding-bottom:40px}.vacio .hero{padding:64px 22px 58px}.mq2{margin-inline:-30px}.bdg{width:104px;height:104px;font-size:14px;top:-26px}}
 </style>
 </head>
 <body>
 <nav><div class="wrap"><a class="brand" href="index.html"><img src="assets/logo-nav-v2.webp" alt="Pipeline Pivot"></a><div><a href="index.html">Inicio</a><button class="nb" type="button" data-open>Contacto</button></div></div></nav>
 <i class="gs g1"></i><i class="gs g2"></i><i class="gs g3"></i><i class="gs g4"></i><i class="gs g5"></i>
 <header><div class="wrap">
-<h1><span class="hw"><img src="assets/tienda-nav-v6.webp" alt="Tienda"><i class="sp s1"></i><i class="sp s2"></i><i class="sp s3"></i><i class="sp s4"></i></span></h1>
+<h1><span class="hw"><img src="assets/tienda-retro.webp" alt="Tienda"><i class="sp s1"></i><i class="sp s2"></i><i class="sp s3"></i><i class="sp s4"></i></span></h1>
 <p>Prints y arte digital con la mirada de Pipeline Pivot.</p>
 <div class="filtros" role="group" aria-label="Filtrar productos">
 <button type="button" data-f="todo" aria-pressed="true">Todo</button>
@@ -199,6 +234,7 @@ nav,header,main,footer,.mq,.gs{position:relative}
 <button type="button" data-f="digital" aria-pressed="false">Arte digital</button>
 </div></div></header>
 <div class="mq" aria-hidden="true"><div><span>Prints<i>✦</i></span><span>Arte digital<i>✦</i></span><span>Muy pronto<i>✦</i></span><span>Prints<i>✦</i></span><span>Arte digital<i>✦</i></span><span>Muy pronto<i>✦</i></span><span>Prints<i>✦</i></span><span>Arte digital<i>✦</i></span><span>Muy pronto<i>✦</i></span><span>Prints<i>✦</i></span><span>Arte digital<i>✦</i></span><span>Muy pronto<i>✦</i></span><span>Prints<i>✦</i></span><span>Arte digital<i>✦</i></span><span>Muy pronto<i>✦</i></span><span>Prints<i>✦</i></span><span>Arte digital<i>✦</i></span><span>Muy pronto<i>✦</i></span></div></div>
+<div class="mq2" aria-hidden="true"><div><span>Hecho a mano<i>✦</i></span><span>Edición limitada<i>✦</i></span><span>Pipeline Pivot<i>✦</i></span><span>Hecho a mano<i>✦</i></span><span>Edición limitada<i>✦</i></span><span>Pipeline Pivot<i>✦</i></span><span>Hecho a mano<i>✦</i></span><span>Edición limitada<i>✦</i></span><span>Pipeline Pivot<i>✦</i></span><span>Hecho a mano<i>✦</i></span><span>Edición limitada<i>✦</i></span><span>Pipeline Pivot<i>✦</i></span><span>Hecho a mano<i>✦</i></span><span>Edición limitada<i>✦</i></span><span>Pipeline Pivot<i>✦</i></span><span>Hecho a mano<i>✦</i></span><span>Edición limitada<i>✦</i></span><span>Pipeline Pivot<i>✦</i></span></div></div>
 <main><div class="wrap">
 <div class="grid" id="grid" aria-live="polite"></div>
 <div class="all" id="all" hidden><a class="btn" id="allbtn" target="_blank" rel="noopener" href="#">Ver toda la tienda ↗</a></div>
@@ -224,7 +260,7 @@ function card(p){
 function render(){
  var list=(T.productos||[]).filter(function(p){return cur==='todo'||p.tipo===cur});
  if(!(T.productos||[]).length){
-  g.innerHTML='<div class="vacio" style="grid-column:1/-1"><div class="hero"><b class="bdg">¡Ya<br>casi!</b><h2>Muy pronto</h2><p>Estoy preparando los primeros prints y piezas de arte digital. Escríbeme y te aviso en cuanto abra.</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+T.whatsapp+'?text='+encodeURIComponent('Hola, quiero que me avises cuando abra la tienda.')+'">Avísame por WhatsApp</a></div><div class="tz"><div class="t1"><span><small>Para tu pared</small>Prints</span></div><div class="t2"><span><small>Para tu pantalla</small>Arte digital</span></div><div class="t3"><span><small>Para ti</small>Novedades</span></div></div></div>';
+  g.innerHTML='<div class="vacio" style="grid-column:1/-1"><div class="hero"><b class="bdg">¡Ya<br>casi!</b><h2><span class="w1">Muy</span> <span class="w2">pronto</span></h2><p>Estoy preparando los primeros prints y piezas de arte digital. Escríbeme y te aviso en cuanto abra.</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+T.whatsapp+'?text='+encodeURIComponent('Hola, quiero que me avises cuando abra la tienda.')+'">Avísame por WhatsApp</a></div><div class="tz"><div class="t1"><span><small>Para tu pared</small>Prints</span></div><div class="t2"><span><small>Para tu pantalla</small>Arte digital</span></div><div class="t3"><span><small>Para ti</small>Novedades</span></div></div></div>';
  }else if(!list.length){
   g.innerHTML='<div class="vacio" style="grid-column:1/-1"><h2>Pronto</h2><p>Todavía no hay piezas en esta categoría.</p></div>';
  }else g.innerHTML=list.map(card).join('');
