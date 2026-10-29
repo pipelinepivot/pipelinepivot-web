@@ -111,6 +111,24 @@ dialog.ct .x{background:#14102f;color:#fff;z-index:3;transition:transform .15s}d
 dialog.ct h2{font-size:clamp(38px,8vw,50px)}dialog.ct .top::before{right:18px;top:auto;bottom:6px;width:64px;height:64px}dialog.ct .top::after{right:84px;bottom:auto;top:10px;width:30px;height:30px}dialog.ct .x{right:12px;top:12px}
 .vacio .hero::before{left:2%;top:6%;width:96px;height:96px}.vacio .hero::after{right:2%;bottom:5%;width:80px;height:80px}.vacio .hero{padding-inline:clamp(28px,9vw,120px)}
 @media(max-width:700px){.vacio .hero::before{width:54px;height:54px;left:4%;top:3%}.vacio .hero::after{width:46px;height:46px;right:4%;bottom:3%}.vacio .btn{font-size:16px;padding:14px 22px;white-space:nowrap}.vacio .hero{padding:56px 22px 52px}}
+
+/* tono sobrio */
+body::before{background:radial-gradient(70% 50% at 0% 0%,rgba(91,61,245,.35),transparent 70%),radial-gradient(50% 40% at 100% 100%,rgba(227,31,99,.16),transparent 70%)}
+.gs{filter:none!important;background:var(--cr)!important;opacity:.85}.g1,.g4,.g5{display:none}.g2{background:#e31f63!important;opacity:.9}.g3{background:#8f78ff!important;opacity:.9}
+.mq{transform:none;margin:18px 0 36px;background:none;box-shadow:none;border-block:1px solid rgba(232,223,192,.35);padding:12px 0}
+.mq span{font-weight:700;font-size:clamp(15px,1.8vw,18px);letter-spacing:.18em;color:var(--cr)}.mq span i{color:#e31f63;margin-left:28px}
+.vacio .hero{background:#5b3df5;border:0;box-shadow:none;border-radius:30px;padding-block:70px 64px}
+.vacio .hero::before{background:var(--cr);opacity:.9;filter:none}.vacio .hero::after{background:#e31f63;filter:none}
+.vacio h2{text-shadow:none;font-size:clamp(40px,7vw,88px);letter-spacing:-.035em}
+.vacio .btn{box-shadow:none;background:var(--cr)}.vacio .btn:hover{transform:translateY(-2px);box-shadow:none;background:#fff}
+.tz div{border:0;border-radius:24px}.tz div:hover{transform:translateY(-4px)}.tz div::before{animation:none;opacity:.9}
+.tz .t1{background:#241a6b}.tz .t2{background:#e31f63}.tz .t2::before{background:var(--cr)}.tz .t3{background:var(--cr);color:#14102f}.tz .t3::before{background:#5b3df5;opacity:1}
+.filtros button[aria-pressed=true]{background:var(--cr);color:#14102f;box-shadow:none}
+.cta-strip{background:#241a6b;border:1px solid rgba(232,223,192,.25);box-shadow:none}.cta-strip .btn{box-shadow:none}
+dialog.ct{box-shadow:0 30px 80px rgba(0,0,0,.55);border:1px solid rgba(232,223,192,.25)}
+dialog.ct .top{background:#5b3df5}dialog.ct .top::before{background:var(--cr)}dialog.ct .top::after{background:#e31f63}
+dialog.ct h2{text-shadow:none}dialog.ct .btn{box-shadow:none}dialog.ct .btn:hover{transform:translateY(-2px);box-shadow:none;background:#fff}
+dialog.ct::backdrop{background:rgba(10,8,30,.82)}
 </style>
 </head>
 <body>
