@@ -45,10 +45,21 @@ main{flex:1;padding-bottom:80px}
 footer{background:#1b232b;color:#b9c4cd;padding:26px 0}
 footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
 footer a{color:inherit}
-nav .brand img{height:64px!important;width:auto}nav .brand{gap:0!important}</style>
+nav .brand img{height:92px!important;margin:-14px 0!important;width:auto}nav .brand{gap:0!important}.cta-strip{margin-top:48px;background:var(--ink);color:#fff;border-radius:26px;padding:22px 28px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.cta-strip b{font-size:20px;letter-spacing:-.02em;display:block}.cta-strip span{font-size:15px;opacity:.8}
+.cta-strip .btn{background:#fff;color:var(--ink)}
+nav button.nb{background:none;border:0;color:inherit;font:inherit;font-weight:500;cursor:pointer;padding:0;margin-left:20px}
+dialog.ct{margin:auto;border:0;border-radius:28px;padding:34px 30px 30px;width:min(440px,92vw);background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(20,12,70,.45)}
+dialog.ct::backdrop{background:rgba(14,12,40,.72);backdrop-filter:blur(4px)}
+dialog.ct h2{font-family:"Land",sans-serif;font-weight:400;font-size:42px;text-transform:uppercase;letter-spacing:.02em;line-height:1}
+dialog.ct p{margin:14px 0 22px;color:var(--mute);font-size:16.5px;line-height:1.45}
+dialog.ct .btn{display:block;text-align:center;width:100%}
+dialog.ct .mail{display:block;margin-top:14px;text-align:center;font-weight:700;color:var(--acc)}
+dialog.ct .x{position:absolute;right:14px;top:14px;width:38px;height:38px;border-radius:50%;border:0;background:#ece8ff;color:var(--ink);font-size:22px;cursor:pointer}
+@media(max-width:520px){nav .wrap{gap:10px}nav div a,nav button.nb{font-size:15px}}</style>
 </head>
 <body>
-<nav><div class="wrap"><a class="brand" href="index.html"><img src="assets/icon-white-right.webp" alt="Pipeline Pivot"></a><div><a href="index.html">Inicio</a><a href="index.html#contacto">Contacto</a></div></div></nav>
+<nav><div class="wrap"><a class="brand" href="index.html"><img src="assets/icon-white-right.webp" alt="Pipeline Pivot"></a><div><a href="index.html">Inicio</a><button class="nb" type="button" data-open>Contacto</button></div></div></nav>
 <header><div class="wrap">
 <h1>Tienda</h1>
 <p>Prints y arte digital con la mirada de Pipeline Pivot.</p>
@@ -60,8 +71,14 @@ nav .brand img{height:64px!important;width:auto}nav .brand{gap:0!important}</sty
 <main><div class="wrap">
 <div class="grid" id="grid" aria-live="polite"></div>
 <div class="all" id="all" hidden><a class="btn" id="allbtn" target="_blank" rel="noopener" href="#">Ver toda la tienda ↗</a></div>
+<div class="cta-strip"><div><b>¿Tienes alguna duda?</b><span>Prints, archivos digitales, envíos o pedidos.</span></div><button class="btn" type="button" data-open>Contacto</button></div>
 </div></main>
 <footer><div class="wrap"><span>Pipeline Pivot</span><span><a href="index.html">Volver a la web</a> · © 2026</span></div></footer>
+<dialog class="ct" id="ct" aria-labelledby="ct-t"><button class="x" type="button" aria-label="Cerrar" data-close>×</button>
+<h2 id="ct-t">Hablemos</h2>
+<p>¿Dudas sobre un print, un archivo digital o un pedido? Escríbeme y te respondo lo antes posible.</p>
+<a class="btn" target="_blank" rel="noopener" href="https://wa.me/34683379317?text=Hola%2C%20tengo%20una%20duda%20sobre%20la%20tienda.">Escríbeme por WhatsApp</a>
+<a class="mail" href="mailto:pipelinepivot@gmail.com">pipelinepivot@gmail.com</a></dialog>
 <script src="productos.js"></script>
 <script>
 (function(){
@@ -86,6 +103,8 @@ document.querySelectorAll('.filtros button').forEach(function(b){b.addEventListe
 if(T.tiendaUrl){var a=document.getElementById('allbtn');a.href=T.tiendaUrl;document.getElementById('all').hidden=false}
 render();
 })();
+(function(){var d=document.getElementById('ct');document.querySelectorAll('[data-open]').forEach(function(b){b.addEventListener('click',function(){d.showModal()})});d.querySelector('[data-close]').addEventListener('click',function(){d.close()});d.addEventListener('click',function(e){if(e.target===d)d.close()})})();
+
 </script>
 </body>
 </html>
