@@ -8,6 +8,7 @@
 <meta name="description" content="Prints y arte digital de Pipeline Pivot.">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap">
 <style>
+@font-face{font-family:"Land";src:url(assets/TheLandBeforeSofia.ttf) format("truetype");font-display:swap}
 :root{--acc:#5b3df5;--ink:#1d1a47;--mute:#4a4b63;--bg:#ece8ff;color-scheme:light}
 *{box-sizing:border-box;margin:0}
 body{font-family:"Inter Tight",Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
@@ -18,7 +19,7 @@ nav a{color:inherit;text-decoration:none;font-weight:500}
 .brand{display:flex;align-items:center;gap:10px}.brand img{height:30px}
 nav div a+a{margin-left:20px}
 header{padding:72px 0 28px}
-h1{font-weight:800;font-size:clamp(44px,8vw,104px);line-height:1;letter-spacing:.14em;text-transform:uppercase}
+h1{font-family:"Land",sans-serif;font-weight:400;font-size:clamp(52px,9vw,120px);line-height:1;letter-spacing:.04em;text-transform:uppercase}
 header p{margin-top:20px;font-size:clamp(17px,2vw,21px);color:var(--mute);max-width:620px}
 .filtros{display:flex;gap:10px;flex-wrap:wrap;margin:34px 0 28px}
 .filtros button{border:2px solid var(--ink);background:transparent;color:var(--ink);padding:10px 22px;border-radius:999px;font:700 15px inherit;font-family:inherit;cursor:pointer;min-height:44px}
@@ -38,7 +39,7 @@ main{flex:1;padding-bottom:80px}
 .btn{display:inline-block;background:var(--acc);color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:700;min-height:44px;line-height:20px}
 .btn.off{background:#cfc9f2;color:var(--ink);pointer-events:none}
 .vacio{background:#fff;border-radius:30px;padding:56px 32px;text-align:center;box-shadow:0 14px 34px rgba(60,40,200,.1)}
-.vacio h2{font-weight:800;font-size:clamp(28px,4.2vw,46px);text-transform:uppercase;letter-spacing:.14em}
+.vacio h2{font-weight:800;font-size:clamp(26px,3.6vw,38px);letter-spacing:-.01em}
 .vacio p{margin:16px auto 26px;max-width:520px;color:var(--mute);font-size:18px;line-height:1.45}
 .all{margin-top:36px;text-align:center}
 footer{background:#1b232b;color:#b9c4cd;padding:26px 0}
@@ -50,7 +51,7 @@ nav .brand img{height:72px!important;margin:0!important;width:auto}nav .brand{ga
 nav button.nb{background:none;border:0;color:inherit;font:inherit;font-weight:500;cursor:pointer;padding:0;margin-left:20px}
 dialog.ct{margin:auto;border:0;border-radius:28px;padding:34px 30px 30px;width:min(440px,92vw);background:#fff;color:var(--ink);box-shadow:0 30px 80px rgba(20,12,70,.45)}
 dialog.ct::backdrop{background:rgba(14,12,40,.72);backdrop-filter:blur(4px)}
-dialog.ct h2{font-weight:800;font-size:34px;text-transform:uppercase;letter-spacing:.14em;line-height:1}
+dialog.ct h2{font-weight:800;font-size:30px;letter-spacing:-.01em;line-height:1}
 dialog.ct p{margin:14px 0 22px;color:var(--mute);font-size:16.5px;line-height:1.45}
 dialog.ct .btn{display:block;text-align:center;width:100%}
 dialog.ct .mail{display:block;margin-top:14px;text-align:center;font-weight:700;color:var(--acc)}
