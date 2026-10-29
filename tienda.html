@@ -129,6 +129,41 @@ dialog.ct{box-shadow:0 30px 80px rgba(0,0,0,.55);border:1px solid rgba(232,223,1
 dialog.ct .top{background:#5b3df5}dialog.ct .top::before{background:var(--cr)}dialog.ct .top::after{background:#e31f63}
 dialog.ct h2{text-shadow:none}dialog.ct .btn{box-shadow:none}dialog.ct .btn:hover{transform:translateY(-2px);box-shadow:none;background:#fff}
 dialog.ct::backdrop{background:rgba(10,8,30,.82)}
+
+/* retro mid-century */
+:root{--bl:#2b3fd1;--bl2:#1b2a99;--nv:#12195c;--cr:#f3ead0;--mu:#f4b72e;--tm:#e8472f;--pk:#f29bbd;--gr:#1f7a52;--bm:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50.0,2.0 59.8,13.3 74.0,8.4 76.9,23.1 91.6,26.0 86.7,40.2 98.0,50.0 86.7,59.8 91.6,74.0 76.9,76.9 74.0,91.6 59.8,86.7 50.0,98.0 40.2,86.7 26.0,91.6 23.1,76.9 8.4,74.0 13.3,59.8 2.0,50.0 13.3,40.2 8.4,26.0 23.1,23.1 26.0,8.4 40.2,13.3' fill='black' stroke='black' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E")}
+body{background:var(--bl);color:var(--cr)}
+body::before{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(#n)'/%3E%3C/svg%3E");opacity:.22;mix-blend-mode:multiply;inset:0;position:fixed}
+.gs{display:block!important;background:var(--cr)!important;opacity:1;filter:none!important}
+.g1{background:var(--mu)!important}.g2{background:var(--pk)!important}.g3{background:var(--cr)!important}.g4{background:var(--mu)!important}.g5{background:var(--pk)!important}
+.g1{left:52%;top:110px;width:54px;height:54px}.g4{left:70%;top:270px}.g5{left:3%;top:520px}
+nav{background:var(--nv)}
+header p{color:var(--cr);font-weight:600}
+.filtros button{border:3px solid var(--cr);color:var(--cr);font-weight:800}.filtros button:hover{background:rgba(243,234,208,.16)}
+.filtros button[aria-pressed=true]{background:var(--mu);border-color:var(--nv);color:var(--nv);box-shadow:3px 3px 0 var(--nv)}
+.mq{background:var(--mu);border:3px solid var(--nv);border-inline:0;transform:rotate(-1.2deg);margin:26px -20px 44px;padding:12px 0;box-shadow:0 5px 0 var(--nv)}
+.mq span{color:var(--nv);font-weight:900;letter-spacing:.1em;font-size:clamp(17px,2.4vw,24px)}.mq span i{color:var(--tm)}
+.vacio .hero{background:var(--tm);border:4px solid var(--nv);box-shadow:9px 9px 0 var(--nv);border-radius:36px;padding-block:78px 70px}
+.vacio .hero::before{background:var(--mu);width:90px;height:90px;left:3%;top:8%}.vacio .hero::after{background:var(--cr);width:64px;height:64px;right:4%;bottom:7%}
+.vacio h2{color:var(--cr);text-shadow:5px 5px 0 var(--nv);font-size:clamp(44px,8vw,100px)}
+.vacio p{color:var(--cr);font-weight:600}
+.vacio .btn{background:var(--mu);color:var(--nv);border:3px solid var(--nv);box-shadow:5px 5px 0 var(--nv)}.vacio .btn:hover{background:var(--cr);transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--nv)}
+.bdg{position:absolute;right:5%;top:-4px;z-index:3;width:128px;height:128px;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:900;font-size:17px;line-height:1.05;text-transform:uppercase;color:var(--nv);transform:rotate(12deg);background:var(--mu);-webkit-mask:var(--bm) center/contain no-repeat;mask:var(--bm) center/contain no-repeat;animation:bdg 6s ease-in-out infinite}
+@keyframes bdg{50%{transform:rotate(-6deg) scale(1.06)}}
+.tz div{border:4px solid var(--nv);box-shadow:6px 6px 0 var(--nv);border-radius:28px;transition:transform .15s,box-shadow .15s}.tz div:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:9px 9px 0 var(--nv)}
+.tz .t1{background:var(--cr);color:var(--nv)}.tz .t1::before{background:var(--bl)}
+.tz .t2{background:var(--mu);color:var(--nv)}.tz .t2::before{background:var(--tm)}
+.tz .t3{background:var(--pk);color:var(--nv)}.tz .t3::before{background:var(--nv);opacity:1}
+.card{background:var(--cr);color:var(--nv);border:4px solid var(--nv);box-shadow:6px 6px 0 var(--nv)}.card .dt{color:#3a3f7a}.card .tag{background:var(--tm)}.card .btn{background:var(--tm);border:3px solid var(--nv)}.card .btn.off{background:var(--mu);color:var(--nv)}
+.cta-strip{background:var(--cr);color:var(--nv);border:4px solid var(--nv);box-shadow:7px 7px 0 var(--nv)}.cta-strip b{font-weight:900}.cta-strip .btn{background:var(--tm);color:var(--cr);border:3px solid var(--nv);box-shadow:3px 3px 0 var(--nv)}
+footer{background:var(--nv);color:var(--cr)}
+dialog.ct{background:var(--cr);color:var(--nv);border:4px solid var(--nv);box-shadow:10px 10px 0 var(--nv),0 30px 80px rgba(0,0,0,.45);border-radius:30px}
+dialog.ct::backdrop{background:rgba(18,25,92,.8)}
+dialog.ct .top{background:var(--mu);border-bottom:4px solid var(--nv)}dialog.ct .top::before{background:var(--tm)}dialog.ct .top::after{background:var(--cr)}
+dialog.ct h2{color:var(--nv);text-shadow:3px 3px 0 var(--cr)}
+dialog.ct p{color:#2b3070}dialog.ct .btn{background:var(--tm);color:var(--cr);border:3px solid var(--nv);box-shadow:5px 5px 0 var(--nv)}dialog.ct .btn:hover{background:var(--bl);box-shadow:7px 7px 0 var(--nv);transform:translate(-2px,-2px)}
+dialog.ct .mail{color:var(--nv);text-decoration-color:var(--tm)}dialog.ct .x{background:var(--nv);color:var(--cr)}
+@media(max-width:700px){.bdg{width:92px;height:92px;font-size:12px;right:3%;top:-14px}}
 </style>
 </head>
 <body>
@@ -168,7 +203,7 @@ function card(p){
 function render(){
  var list=(T.productos||[]).filter(function(p){return cur==='todo'||p.tipo===cur});
  if(!(T.productos||[]).length){
-  g.innerHTML='<div class="vacio" style="grid-column:1/-1"><div class="hero"><h2>Muy pronto</h2><p>Estoy preparando los primeros prints y piezas de arte digital. Escríbeme y te aviso en cuanto abra.</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+T.whatsapp+'?text='+encodeURIComponent('Hola, quiero que me avises cuando abra la tienda.')+'">Avísame por WhatsApp</a></div><div class="tz"><div class="t1"><span><small>Para tu pared</small>Prints</span></div><div class="t2"><span><small>Para tu pantalla</small>Arte digital</span></div><div class="t3"><span><small>Para ti</small>Novedades</span></div></div></div>';
+  g.innerHTML='<div class="vacio" style="grid-column:1/-1"><div class="hero"><b class="bdg">¡Ya<br>casi!</b><h2>Muy pronto</h2><p>Estoy preparando los primeros prints y piezas de arte digital. Escríbeme y te aviso en cuanto abra.</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+T.whatsapp+'?text='+encodeURIComponent('Hola, quiero que me avises cuando abra la tienda.')+'">Avísame por WhatsApp</a></div><div class="tz"><div class="t1"><span><small>Para tu pared</small>Prints</span></div><div class="t2"><span><small>Para tu pantalla</small>Arte digital</span></div><div class="t3"><span><small>Para ti</small>Novedades</span></div></div></div>';
  }else if(!list.length){
   g.innerHTML='<div class="vacio" style="grid-column:1/-1"><h2>Pronto</h2><p>Todavía no hay piezas en esta categoría.</p></div>';
  }else g.innerHTML=list.map(card).join('');
